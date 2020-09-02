@@ -39,7 +39,7 @@ body {
   
   .container {
     background-color: #ffffff;
-    padding: 5px 20px 15px 20px;
+    padding: 5px 0 15px 0;
     border: none;
     border-radius: 3px;
     box-shadow: 10px 10px 10px 8px rgba(0, 0.2, 0.2, 0.2);
@@ -54,6 +54,7 @@ body {
   input[type=text] {
     width: 100%;
     margin-bottom: 20px;
+    margin-left: -20px;
     padding: 12px;
     border: none;
     border-radius: 3px;
