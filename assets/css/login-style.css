@@ -19,7 +19,7 @@ html,body{
   overflow: hidden;
   max-width: 390px;
   background: #fff;
-  padding: 100px 30px;
+  padding: 100px 100px;
   border-radius: 5px;
   box-shadow: 0 15px 20px rgba(0,0,0,0.1);
 }
@@ -97,10 +97,9 @@ input[type="radio"]{
 }
 .form-container .form-inner{
   display: flex;
-  width: 200%;
 }
 .form-container .form-inner form{
-  width: 50%;
+  width: 100%;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 .form-inner form .field{
@@ -113,7 +112,8 @@ input[type="radio"]{
   }
 .form-inner form .field input{
   height: 100%;
-  width: 100%;
+  width: 22rem;
+  margin-left: -5rem;
   outline: none;
   padding-left: 15px;
   border-radius: 5px;
