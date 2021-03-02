@@ -26,7 +26,6 @@
 </head>
 
 <body>
-
   <header class="header-area formobile-menu header--transparent black-logo-version header--sticky">
     <div class="header-wrapper" id="header-wrapper">
         <div class="header-left">
@@ -69,18 +68,26 @@
     </div>
 </header>
 
-    <form action="confirmation.html" style="width: 23rem; margin: 20rem auto;">
+<div class="align-well">
+    <div id="hideDiv">
+        <div class="loader"></div>
+    </div>
+
+    <form action="confirmation.html" style="width: 23rem; margin: 0 auto">
       <div class="form-group">
         <label for="email">Enter OTP sent to your email</label>
-        <input type="text" class="form-control" placeholder="Enter OTP" required/>
+        <input type="text" id="input-field" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP" required/>
         <input type="submit" class="btn" />
       </div>
     </form>
+</div>
 
 
     <!-- JS
 ============================================ -->
     <!-- Modernizer JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="assets/js/vendor/modernizr.min.js"></script>
     <!-- jQuery JS -->
     <script src="assets/js/vendor/jquery.js"></script>
@@ -93,6 +100,15 @@
     <script src="assets/js/plugins/plugins.min.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            setTimeout(function () {
+                $("#hideDiv").hide();
+                $('#input-field').val("32094");
+            }, 2000)
+        })
+    </script>
 
 
 </body>

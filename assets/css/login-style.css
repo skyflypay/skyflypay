@@ -113,9 +113,7 @@ input[type="radio"]{
 .form-inner form .field input{
   height: 100%;
   width: 22rem;
-  margin-left: -5rem;
   outline: none;
-  padding-left: 15px;
   border-radius: 5px;
   border: none;
   background-color: #f2f2f2;
