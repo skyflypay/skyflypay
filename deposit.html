@@ -26,6 +26,7 @@
 </head>
 
 <body>
+  <div id="showw">
 
     <header class="header-area formobile-menu header--transparent black-logo-version header--sticky">
         <div class="header-wrapper" id="header-wrapper">
@@ -69,28 +70,27 @@
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="otp.html">
-      
+      <form>
         <div class="row form-bill">
           <div class="col-50">
             <h3>Billing Address</h3>
             <label for="fname"><i class="fa fa-user" style="color: #f9004d;"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+            <input type="text" id="input-field" name="firstname" placeholder="John M. Doe" required>
 
             <label for="email"><i class="fa fa-envelope" style="color: #f9004d;"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com" required>
+            <input type="text" id="input-field" name="email" placeholder="john@example.com" required>
 
             <label for="adr"><i class="fa fa-address-card-o" style="color: #f9004d;"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+            <input type="text" id="input-field" name="address" placeholder="542 W. 15th Street" required>
 
             <label for="ban">Beneficiary's Account Name</label>
-            <input type="text" id="ban" name="name" placeholder="E.g Chisom Jide" required>
+            <input type="text" id="input-field" name="name" placeholder="E.g Chisom Jide" required>
 
             <label for="adr">Beneficiary's Account Number</label>
-            <input type="text" id="ban-1" name="number" placeholder="1559843758" required>
+            <input type="text" id="input-field" name="number" placeholder="1559843758" required>
 
             <label for="adr">Beneficiary's Phone Number</label>
-            <input type="text" id="bpm" name="number" placeholder="09046578756" required>
+            <input type="text" id="input-field" name="number" placeholder="09046578756" required>
 
             <!-- <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
             <input type="text" id="city" name="city" placeholder="Lagos" required> -->
@@ -98,11 +98,11 @@
             <div class="row">
               <div class="col-50">
                 <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="Lagos" required>
+                <input type="text" id="input-field" name="state" placeholder="Lagos" required>
               </div>
               <div class="col-50">
                 <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="100242" required>
+                <input type="text" id="input-field" name="zip" placeholder="100242" required>
               </div>
             </div>
           </div>
@@ -117,37 +117,47 @@
               <i class="fa fa-cc-discover" style="color:orange; font-size: 30px; margin-right: 10px;"></i>
             </div>
             <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+            <input type="text" id="input-field" name="cardname" placeholder="John More Doe" required>
             <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="8888-8888-8888-8888" required>
+            <input type="text" id="input-field" name="cardnumber" placeholder="8888-8888-8888-8888" required>
             <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+            <input type="text" id="input-field" name="expmonth" placeholder="September" required>
             <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="Lagos" required>
+            <input type="text" id="input-field" name="city" placeholder="Lagos" required>
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018" required>
+                <input type="text" id="input-field" name="expyear" placeholder="2018" required>
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352" required>
+                <input type="text" id="input-field" name="cvv" placeholder="352" required>
               </div>
             </div>
             <label for="ban">Beneficiary's Wallet ID</label>
-            <input type="text" id="bwi" name="number" placeholder="#102833" required>
+            <input type="text" id="bwi" name="number" placeholder="#102833" />
           </div>
-          
         </div>
-        <input type="submit" value="Make Deposit" class="btn">
+        <!-- <input type="button" id="depositBtn" value="Make Deposit" class="btn"> -->
+        <button type="button" id="depositBtn" class="btn">Make Deposit</button>
       </form>
     </div>
   </div>
 </div>
+</div>
 
-    <!-- JS
-============================================ -->
-    <!-- Modernizer JS -->
+<div id="hidee">
+  <div class="some-margin">
+    <div style="padding: 0; margin-top: -50px;" class="text-center">
+      <i class="far fa-frown-open text-danger pb-3" style="font-size: 50px;"></i>
+      <p style="font-weight: 600;">Sorry! we can't reach this wallet address at the moment</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="assets/js/vendor/modernizr.min.js"></script>
     <!-- jQuery JS -->
     <script src="assets/js/vendor/jquery.js"></script>
@@ -161,6 +171,29 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 
+
+    <script type="text/javascript">
+      $(function () {
+        $('#hidee').hide();
+      })
+
+      $('#depositBtn').on('click', function () {
+        let value = $('#bwi').val();
+        if ($('#input-field').val().length === 0) {
+          alert("Fields cannot be empty");
+          $('#showw').show();
+          window.close("otp.html")
+        }
+        else if (value.length !== 0) {
+          $('#showw').hide();
+          $('#hidee').show();
+        }
+        else {
+          window.open("otp.html")
+        }
+      })
+
+    </script>
 
 </body>
 

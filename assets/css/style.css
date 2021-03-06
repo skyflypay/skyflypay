@@ -17711,6 +17711,9 @@ a.purchase-btn:hover {
 .visible {
   display: block;
 }
+.some-margin {
+  margin-top: 350px;
+}
 .loader {
   border: 5px solid #f3f3f3;
   border-radius: 50%;
@@ -17748,4 +17751,12 @@ a.purchase-btn:hover {
   text-align: center;
   line-height: 30px;
   color: white;
+}
+.progress-btn {
+  color: #fff;
+  padding: 10px 20px;
+}
+.progress-btn:hover {
+  background-color: #2CA3EF;
+  border-color: #2CA3EF;
 }

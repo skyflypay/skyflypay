@@ -40,6 +40,7 @@
                                     <div id="myProgress">
                                         <div id="myBar">10%</div>
                                     </div>
+                                    <button onclick="pagechange()" id="progress" class="progress-btn">Click to continue</button>
                                 </div>
                             </div>
                         </div>
@@ -65,17 +66,24 @@
 
 <script>
     var i = 0;
+        let btn = document.getElementById("progress")
+        btn.classList.add("hidden");
+
+        function pagechange() {
+                window.open("homepage.html")
+        }
+    
     function move() {
         if (i == 0) {
             i = 1;
             var elem = document.getElementById("myBar");
             var width = 10;
-            var id = setInterval(frame, 90);
+            var id = setInterval(frame, 250);
             function frame() {
                 if (width >= 100) {
                     clearInterval(id);
                     i = 0;
-                    window.open("homepage.html")
+                    btn.classList.add("visible");
                 } else {
                     width++;
                     elem.style.width = width + "%";
