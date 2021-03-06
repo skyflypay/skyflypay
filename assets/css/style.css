@@ -17705,6 +17705,12 @@ a.purchase-btn:hover {
 .align-well {
   margin-top: 20%;
 }
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
 .loader {
   border: 5px solid #f3f3f3;
   border-radius: 50%;
@@ -17726,4 +17732,20 @@ a.purchase-btn:hover {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+#myProgress {
+  width: 50%;
+  margin: 40px auto;
+  background-color: #999;
+  border-radius: 20px;
+}
+
+#myBar {
+  width: 10%;
+  border-radius: 20px;
+  height: 30px;
+  background-color: #2CA3EF;
+  text-align: center;
+  line-height: 30px;
+  color: white;
 }

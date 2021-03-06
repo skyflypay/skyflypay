@@ -73,13 +73,24 @@
         <div class="loader"></div>
     </div>
 
-    <form action="confirmation.html" style="width: 23rem; margin: 0 auto">
-      <div class="form-group">
-        <label for="email">Enter OTP sent to your email</label>
-        <input type="text" id="input-field" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP" required/>
-        <input type="submit" class="btn" />
-      </div>
+    <form style="width: 23rem; margin: 0 auto">
+        <div id="hideMe">
+            <div class="form-group">
+                <label for="email">Enter OTP sent to your email</label>
+                <input type="text" id="input-field" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP" required/>
+                <!-- <input type="submit" class="btn" id="gobtn" /> -->
+                <button type="button" class="btn" id="gobtn">Submit</button>
+              </div>
+        </div>
     </form>
+</div>
+
+<div id="successPage" style="display: none;">
+    <div class="text-center">
+        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 150px; color: green; margin-bottom: 20px;"></i>
+        <h4>Success!</h4>
+        <p>This transaction has been<br /> authorised and will now be<br /> processed.</p>
+    </div>
 </div>
 
 
@@ -102,12 +113,41 @@
     <script src="assets/js/main.js"></script>
 
     <script type="text/javascript">
+    let value = '';
         $(function () {
+            let value = "32094";
             setTimeout(function () {
                 $("#hideDiv").hide();
-                $('#input-field').val("32094");
-            }, 2000)
+                $('#input-field').val(value);
+            }, 3000)
         })
+
+        $('#gobtn').on('click', function () {
+            $('#hideDiv').show();
+            $('#hideMe').hide();
+
+            if($('#input-field').val().length === 0) {
+                alert("Field cannot be empty");
+                $('#successPage').hide();
+                $('#hideDiv').hide();
+                $('#hideMe').show();
+            }
+            else {
+                setTimeout(function () {
+                    $('#hideDiv').hide();
+                    $('#hideMe').hide();
+                    $('#successPage').show();
+                }, 3000)
+            }
+        })
+        // function review(field) {
+        //     if (value.charAt(0) == "3"){
+        //         window.open("confirmation.html")
+        //     }
+        //     else {
+        //         alert("Incorrect OTP!")
+        //     }
+        // }
     </script>
 
 
