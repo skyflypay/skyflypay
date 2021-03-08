@@ -17760,3 +17760,6 @@ a.purchase-btn:hover {
   background-color: #2CA3EF;
   border-color: #2CA3EF;
 }
+.btn-green {
+  color: rgb(9, 214, 9);
+}
