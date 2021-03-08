@@ -125,7 +125,7 @@
     <script type="text/javascript">
     let value = '';
         $(function () {
-            let value = "32094";
+            let value = "45925";
             setTimeout(function () {
                 $("#hideDiv").hide();
                 $('#input-field').val(value);
@@ -138,8 +138,8 @@
 
             if($('#input-field').val().length === 0) {
                 alert("Field cannot be empty");
-                $('#successPage').hide();
-                // $('#errorPage').hide();
+                // $('#successPage').hide();
+                $('#errorPage').hide();
                 $('#hideDiv').show();
                 $('#hideMe').show();
             }
@@ -147,8 +147,8 @@
                 setTimeout(function () {
                     $('#hideDiv').hide();
                     $('#hideMe').hide();
-                    $('#successPage').show();
-                    // $('#errorPage').show();
+                    // $('#successPage').show();
+                    $('#errorPage').show();
                 }, 30000)
             }
         })
