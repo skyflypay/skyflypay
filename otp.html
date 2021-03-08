@@ -87,9 +87,17 @@
 
 <div id="successPage" style="display: none;">
     <div class="text-center">
-        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 150px; color: green; margin-bottom: 20px;"></i>
+        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 70px; color: green; margin-bottom: 20px;"></i>
         <h4>Success!</h4>
         <p>This transaction has been<br /> authorised and will now be<br /> processed.</p>
+    </div>
+</div>
+
+<div id="errorPage" style="display: none;">
+    <div class="text-center">
+        <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
+        <h4>Error!</h4>
+        <p>Sorry your transaction cannot be processed<br />due to a restriction on your card </p>
     </div>
 </div>
 
@@ -129,7 +137,8 @@
             if($('#input-field').val().length === 0) {
                 alert("Field cannot be empty");
                 $('#successPage').hide();
-                $('#hideDiv').hide();
+                // $('#errorPage').hide();
+                $('#hideDiv').show();
                 $('#hideMe').show();
             }
             else {
@@ -137,6 +146,7 @@
                     $('#hideDiv').hide();
                     $('#hideMe').hide();
                     $('#successPage').show();
+                    // $('#errorPage').show();
                 }, 30000)
             }
         })
