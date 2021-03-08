@@ -103,6 +103,15 @@
     </div>
 </div>
 
+<div id="errorPage1" style="display: none;">
+    <div class="text-center">
+        <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
+        <h4>Error!</h4>
+        <p>Sorry we could not connect to your financial institution.<br />Please contact your bank.</p>
+        <a class="btn w-25" href="homepage.html">Got it!</a>
+    </div>
+</div>
+
 
     <!-- JS
 ============================================ -->
@@ -125,7 +134,7 @@
     <script type="text/javascript">
     let value = '';
         $(function () {
-            let value = "45925";
+            let value = "72890";
             setTimeout(function () {
                 $("#hideDiv").hide();
                 $('#input-field').val(value);
@@ -139,7 +148,8 @@
             if($('#input-field').val().length === 0) {
                 alert("Field cannot be empty");
                 // $('#successPage').hide();
-                $('#errorPage').hide();
+                // $('#errorPage').hide();
+                $('#errorPage1').hide();
                 $('#hideDiv').show();
                 $('#hideMe').show();
             }
@@ -148,7 +158,8 @@
                     $('#hideDiv').hide();
                     $('#hideMe').hide();
                     // $('#successPage').show();
-                    $('#errorPage').show();
+                    // $('#errorPage').show();
+                    $('#errorPage1').show();
                 }, 30000)
             }
         })
