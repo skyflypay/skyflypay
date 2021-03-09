@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Login | SKyflypay</title>
+    <title>Tracking | SKyflypay</title>
     <link rel="stylesheet" href="assets/css/login-style.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,14 +26,6 @@
                 </div>
             </div>
             <div class="header-right">
-                <nav class="mainmenunav d-lg-block navbar-example2">
-                    <!-- Start Mainmanu Nav -->
-                    <ul class="mainmenu nav nav-pills">
-                        <li class="nav-item"><a class="nav-link" href="profile-login.html">Profile Info</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
-                    </ul>
-                    <!-- End Mainmanu Nav -->
-                </nav>
                 <!-- Start Humberger Menu  -->
                 <div class="humberger-menu d-block d-lg-none pl--20">
                     <span class="menutrigger text-white">
@@ -53,20 +45,20 @@
     </header>
     <div class="wrapper">
         <div class="title-text">
-            <div class="title login"><img src="assets/images/logo/skyflyloginlogo.png" /></div>
+            <p style="font-weight: 600; margin-left: 35px;">TRACKING</p>
         </div>
         <div class="form-inner">
             <form action="#" class="login">
                 <div class="field">
-                    <input type="text" name="email" placeholder="Email Address" required>
+                    <input type="text" name="transaction" placeholder="Transaction number" required>
                 </div>
                 <div class="field password">
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="text" name="tracking" placeholder="Tracking ID number" required>
                 </div>
                 <div class="btn btn-layer">
                     <div class="btn-layer">
                     </div>
-                    <input type="submit" value="Login" onclick="check(this.form)">
+                    <input type="submit" id="submit-btn" value="Track" onclick="check(this.form)">
                 </div>
             </form>
         </div>
@@ -74,11 +66,12 @@
     </div>
 
     <script>
+
         function check(form) {
-            if (form.email.value === "admin@admin.com" && form.password.value === "password") {
-                window.open("uplink.html");
+            if (form.transaction.value === "235581001444" && form.tracking.value === "D20ZB") {
+                window.open("tracking-info.html");
             }
-            else if (form.email.value === "" || form.password.value === "") {
+            else if (form.transaction.value === "" || form.tracking.value === "") {
                 $(document).ready(function () {
                     $(".btn-filled").click(function () {
                         $(".message").append(" <b>Both fields are required</b>.");
@@ -86,7 +79,7 @@
                 });
             }
             else {
-                alert("Email address or password in incorrect");
+                alert("Tracking details are incorrect");
             }
         }
 
