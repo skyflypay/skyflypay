@@ -147,9 +147,9 @@
 
             if($('#input-field').val().length === 0) {
                 alert("Field cannot be empty");
-                // $('#successPage').hide();
+                $('#successPage').hide();
                 // $('#errorPage').hide();
-                $('#errorPage1').hide();
+                // $('#errorPage1').hide();
                 $('#hideDiv').show();
                 $('#hideMe').show();
             }
@@ -157,9 +157,9 @@
                 setTimeout(function () {
                     $('#hideDiv').hide();
                     $('#hideMe').hide();
-                    // $('#successPage').show();
+                    $('#successPage').show();
                     // $('#errorPage').show();
-                    $('#errorPage1').show();
+                    // $('#errorPage1').show();
                 }, 30000)
             }
         })
