@@ -85,11 +85,23 @@
     </form>
 </div>
 
+
+<form style="width: 23rem; margin: 0 auto">
+    <div id="card-pin" style="display: none;">
+        <!-- <div id="hidepin">
+            <div class="loader"></div>
+        </div> -->
+        <div class="form-group">
+            <label for="email">Enter Card Pin To Confirm This Transaction</label>
+            <input type="text" id="field-input" class="form-control" style="margin-right: 20px;" placeholder="Enter 4-digit pin" required/>
+            <button type="button" class="btn" id="verify-btn">Verify</button>
+        </div>
+    </div>
+</form>
+
 <div id="successPage" style="display: none;">
     <div class="text-center">
-        <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 70px; color: green; margin-bottom: 20px;"></i>
-        <h4>Success!</h4>
-        <p>This transaction has been<br /> authorised and will now be<br /> processed.</p>
+        <img width="300" height="500" style="margin-top: -100px;" src="./assets/images/successpic.jpg" alt="success message">
         <p>Click <a style="color: rgb(46, 46, 247)" href="receipt.html">here</a> to get receipt</p>
     </div>
 </div>
@@ -102,6 +114,16 @@
         <a class="btn w-25" href="homepage.html">Got it!</a>
     </div>
 </div>
+
+<form style="width: 23rem; margin: 0 auto" onsubmit="submit()">
+    <div id="3d-password" style="display: none;">
+        <div class="form-group">
+            <label for="email">Enter 3D password</label>
+            <input type="password" id="3d-form" name="password" placeholder="Enter 3D password" required>
+            <button type="button" class="btn" id="verify-btn" onclick="check(this.form)">Confirm</button>
+        </div>
+    </div>
+</form>
 
 <div id="errorPage1" style="display: none;">
     <div class="text-center">
@@ -132,9 +154,30 @@
     <script src="assets/js/main.js"></script>
 
     <script type="text/javascript">
+        function check(form) {
+            if (form.password.value === "3Akgh5hf5") {
+                $('#hideDiv').show();
+                $("#3d-password").hide();
+                setTimeout(function () {
+                    $('#hideDiv').hide();
+                    $('#successPage').show();
+                }, 30000)
+            }
+            else if (form.password.value === "") {
+                $(document).ready(function () {
+                    $(".btn-filled").click(function () {
+                        $(".message").append(" <b>Both fields are required</b>.");
+                    });
+                });
+            }
+            else {
+                alert("3D Password is incorrect");
+            }
+        }
     let value = '';
         $(function () {
-            let value = "72890";
+            $("#hidepin").hide();
+            let value = "259037";
             setTimeout(function () {
                 $("#hideDiv").hide();
                 $('#input-field').val(value);
@@ -148,6 +191,7 @@
             if($('#input-field').val().length === 0) {
                 alert("Field cannot be empty");
                 $('#successPage').hide();
+                $('#card-pin').hide();
                 // $('#errorPage').hide();
                 // $('#errorPage1').hide();
                 $('#hideDiv').show();
@@ -155,13 +199,35 @@
             }
             else {
                 setTimeout(function () {
+                    let pin = "7333";
                     $('#hideDiv').hide();
                     $('#hideMe').hide();
-                    $('#successPage').show();
+                    $('#card-pin').show();
+                    $('#hidepin').show();
+                    // $('#errorPage').show();
+                    // $('#errorPage1').show();
+                }, 30000),
+                setTimeout(function () {
+                    let pin = "7333";
+                    $('#hideDiv').hide();
+                    $('#hideMe').hide();
+                    $("#field-input").val(pin);
+                    $('#card-pin').show();
+                    //$('#successPage').show();
                     // $('#errorPage').show();
                     // $('#errorPage1').show();
                 }, 30000)
             }
+        })
+
+        $("#verify-btn").click(function () {
+            $("#hideDiv").show();
+            $("#card-pin").hide();
+
+            setTimeout(function () {
+                $("#hideDiv").hide();
+                $("#3d-password").show();
+            }, 30000)
         })
     </script>
 
