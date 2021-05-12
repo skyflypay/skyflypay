@@ -17,9 +17,15 @@
 </head>
 
 <body>
-    <div>
-        <div style="padding: 0; margin: -250px auto;">
-            <h5 style="font-weight: 600; line-height: 30px; width: 60%; margin: 0 auto; margin-bottom: 30px;">Welcome to your Claimants Portfolio
+    <div id="hideDiv">
+        <div class="loader" style="margin-top: 20%;"></div>
+    </div>
+
+    <div id="showDiv">
+        <div class="text-center">
+            <i class="far fa-frown-open text-danger pb-3" style="font-size: 50px;"></i><br />
+            <h5>Session timed out!</h5>
+            <!-- <h5 style="font-weight: 600; line-height: 30px; width: 60%; margin: 0 auto; margin-bottom: 30px;">Welcome to your Claimants Portfolio
                 NOTE: This portfolio is for benefactors who are unemployed or seeking for loans with their legible
                 documents.
             </h5>
@@ -32,9 +38,34 @@
 
                 <p style="margin-left: 270px; margin-top: 30px;">If you are a subscriber of skypay click here to get your claimant portfolio ID for safe cash out.</p>
                 <a href="error-page.html"><button style="padding: 10px 15px; margin-left: 570px; margin-top: 30px;">Portfolio ID</button></a>
+        </div> -->
         </div>
     </div>
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/stellar.js"></script>
+    <script src="assets/js/vendor/particles.js"></script>
+    <script src="assets/js/vendor/masonry.js"></script>
+    <script src="assets/js/vendor/stickysidebar.js"></script>
+    <script src="assets/js/plugins/plugins.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+
+    <script type="text/javascript">
+        $('#showDiv').hide();
+        $(function () {
+            setTimeout(function () {
+                $('#hideDiv').hide();
+                $('#showDiv').show();
+            }, 60000)
+        })
+    </script>
 
 </body>
 
