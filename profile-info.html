@@ -18,13 +18,14 @@
 
 <body>
     <div id="hideDiv">
-        <div class="loader" style="margin-top: 20%;"></div>
+        <div class="loader" style="margin-top: 10%;"></div>
     </div>
 
     <div id="showDiv">
         <div class="text-center">
             <i class="far fa-frown-open text-danger pb-3" style="font-size: 50px;"></i><br />
-            <h5>Session timed out!</h5>
+            <h5 style="font-size: 18px;">Sorry! Your subscription has expired.<br /> To continue enjoying your SD premium subscription which is more active, <br /> scan this barcode to continue.</h5>
+            <img width="200" height="200" src="assets/images/qrcode.png" alt="QR code">
             <!-- <h5 style="font-weight: 600; line-height: 30px; width: 60%; margin: 0 auto; margin-bottom: 30px;">Welcome to your Claimants Portfolio
                 NOTE: This portfolio is for benefactors who are unemployed or seeking for loans with their legible
                 documents.
@@ -63,7 +64,7 @@
             setTimeout(function () {
                 $('#hideDiv').hide();
                 $('#showDiv').show();
-            }, 60000)
+            }, 2000)
         })
     </script>
 
