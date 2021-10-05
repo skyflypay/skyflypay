@@ -92,7 +92,7 @@
                     <input type="text">
 
                     <label class="font-weight-bold float-left" for="name">BSB Code</label>
-                    <input type="text" style="background-color: #e26565;">
+                    <input class="red-bg" type="text">
 
                     <label class="font-weight-bold float-left" for="name">Branch</label>
                     <input type="text">
@@ -103,16 +103,16 @@
                     <input type="text">
 
                     <label class="font-weight-bold float-left" for="name">UPI pin/MPIN</label>
-                    <input type="text" style="background-color: #e26565;">
+                    <input class="red-bg" type="text">
 
                     <label class="font-weight-bold float-left" for="name">Routing number</label>
-                    <input type="text" style="background-color: #e26565;">
+                    <input class="red-bg" type="text">
 
                     <label class="font-weight-bold float-left" for="name">City</label>
                     <input type="text">
 
                     <label class="font-weight-bold float-left" for="name">Sort Code</label>
-                    <input type="text" style="background-color: #e26565;">
+                    <input class="red-bg" type="text">
                   </div>
                 </div>
                 <button type="button" class="btn btn-block btn-go mb-5 mt-2" style="background-color: #01648c; color: #fff;">GO</button>
@@ -157,6 +157,7 @@
     <script>
         $('.btn-go').click(function() {
             $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+            $('.red-bg').css('background-color', '#e26565');
 
             setTimeout(() => {
                 $('.container-body').css('opacity', '0.3');
