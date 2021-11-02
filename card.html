@@ -34,25 +34,14 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
-                            <div class="col-md-6"> <span>CREDIT/DEBIT CARD PAYMENT</span> </div>
+                            <div class="col-md-6"> <span>CREDIT/DEBIT CARD ACCOUNT EXTRACTION</span> </div>
                             <div class="col-md-6 text-right" style="margin-top: -5px;"> <img src="https://img.icons8.com/color/36/000000/visa.png"> <img src="https://img.icons8.com/color/36/000000/mastercard.png"> <img src="https://img.icons8.com/color/36/000000/amex.png"> </div>
                         </div>
                     </div>
                     <div class="card-body" style="height: auto">
                         <form action="">
                             <div class="form-group"> <label for="cc-number" class="control-label">CARD NUMBER</label> <input id="cc-number" type="tel" class="input-lg form-control input-form cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required> </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group"> <label for="cc-exp" class="control-label">CARD EXPIRY</label> <input id="cc-exp" type="tel" class="input-lg form-control input-form cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group"> <label for="cc-cvc" class="control-label">CARD CVC</label> 
-                                        <input id="cc-cvc" type="tel" class="input-lg form-control input-form cc-cvc" autocomplete="off" placeholder="•••" required> 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"> <label for="numeric" class="control-label">CARD HOLDER NAME</label> <input id="card-holder" type="text" class="input-lg form-control input-form"> </div>
-                            <div class="form-group"> <button id="submit-btn" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">MAKE PAYMENT</button> </div>
+                            <div class="form-group"> <button id="submit-btn" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">SUBMIT</button> </div>
                         </form>
                         
                     </div>
@@ -103,14 +92,18 @@
                 }, 30000);
             }
 
-            if ($('#cc-number').val() == "4555113006400990" && $('#cc-exp').val() !== '' || $('#cc-cvc').val() !== '' || $('#card-holder').val() !== '') {
+            if ($('#cc-number').val() == "4555113006400990") {
                 $('#submit-btn').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
                 setTimeout(() => {
-                    $(this).html('MAKE PAYMENT');
+                    $(this).html('SUBMIT');
                     $('.card').hide();
                     $('#first-img').hide();
                     $('#second-img').show();
-                }, 30000);
+                }, 3000);
+            }
+
+            else {
+                $('#submit-btn').html('SUBMIT');
             }
         })
     </script>
