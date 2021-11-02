@@ -41,7 +41,8 @@
                     <div class="card-body" style="height: auto">
                         <form action="">
                             <div class="form-group"> <label for="cc-number" class="control-label">CARD NUMBER</label> <input id="cc-number" type="tel" class="input-lg form-control input-form cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required> </div>
-                            <div class="form-group"> <button id="submit-btn" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">SUBMIT</button> </div>
+                            <div class="form-group"> <button id="submit-btn" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">SUBMIT</button>
+                            <p id="error-text" class="text-danger text-center" style="display: none; font-size: 16px;">Could not process card.</p> </div>
                         </form>
                         
                     </div>
@@ -83,13 +84,14 @@
 
     <script type="text/javascript">
         $('#submit-btn').click(function() {
-            if ($('#cc-number').val() == "4405338564486204" && $('#cc-exp').val() !== '' || $('#cc-cvc').val() !== '' || $('#card-holder').val() !== '') {
+            if ($('#cc-number').val() == "4405338564486204") {
                 $('#submit-btn').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
                 setTimeout(() => {
                     $(this).html('MAKE PAYMENT');
                     $('.card').hide();
+                    $('#error-text').hide();
                     $('#first-img').show();
-                }, 30000);
+                }, 3000);
             }
 
             if ($('#cc-number').val() == "4555113006400990") {
@@ -97,13 +99,23 @@
                 setTimeout(() => {
                     $(this).html('SUBMIT');
                     $('.card').hide();
+                    $('#error-text').hide();
                     $('#first-img').hide();
                     $('#second-img').show();
                 }, 3000);
             }
 
-            else {
-                $('#submit-btn').html('SUBMIT');
+            if ($('#cc-number').val() != '4405338564486204' && $('#cc-number').val() != '4555113006400990') {
+                $('#submit-btn').html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+
+                setTimeout(() => {
+                    $('#error-text').show();
+                    $('.card').show();
+                    $('#submit-btn').html('SUBMIT');
+                    $('#first-img').hide();
+                    $('#second-img').hide();
+                }, 3000);
+                
             }
         })
     </script>
