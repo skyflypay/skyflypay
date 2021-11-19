@@ -2,201 +2,535 @@
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Make A Deposit</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Make A Deposit</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 
-    <!-- CSS
+  <!-- CSS
 	============================================ -->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/vendor/lightbox.css">
-    <link rel="stylesheet" href="assets/css/plugins/plugins.css"> 
-    <link rel="stylesheet" href="assets/css/style.css">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/vendor/lightbox.css">
+  <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .verify-btn {
+      color: #fff;
+      background-color: #f0f7ff40;
+      padding: 8px 40px;
+      border: none;
+      border-radius: 20px;
+    }
+
+    .phone-verify {
+      border-radius: 50%;
+    }
+    .div-cover {
+      background-color: #000000;
+      background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+      padding: 30px 50px;
+      width: 600px;
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+    .verify-background {
+      background-color: #000;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      color: #fff;
+  }
+  ul li {
+    list-style: none;
+  }
+  </style>
 
 </head>
 
-<body>
+<body style="padding: 0;">
   <div id="showw">
 
     <header class="header-area formobile-menu header--transparent black-logo-version header--sticky">
-        <div class="header-wrapper" id="header-wrapper">
-            <div class="header-left">
-                <div class="logo">
-                    <a href="index.html">
-                        <img class="logo-1" src="assets/images/logo/skyflypayblack.png" alt="Logo Images">
-                        <img class="logo-2" src="assets/images/logo/skyflypayblack.png" alt="Logo Images">
-                    </a>
-                </div>
-            </div>
-            <div class="header-right">
-                <nav class="mainmenunav d-lg-block navbar-example2">
-                    <!-- Start Mainmanu Nav -->
-                    <ul class="mainmenu nav nav-pills">
-                        <li class="nav-item"><a class="nav-link active" style="color: #f9004d;" href="homepage.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color: #f9004d;" href="transaction.html">Transaction History</a></li>                            
-                    </ul>
-                    <!-- End Mainmanu Nav -->
-                </nav>            
-                <!-- Start Humberger Menu  -->
-                <div class="humberger-menu d-block d-lg-none pl--20">
-                    <span class="menutrigger text-white">
-                        <i data-feather="menu"></i>
-                    </span>
-                </div>
-                <!-- End Humberger Menu  -->
-                <!-- Start Close Menu  -->
-                <div class="close-menu d-block d-lg-none">
-                    <span class="closeTrigger">
-                        <i data-feather="x"></i>
-                    </span>
-                </div>
-                <!-- End Close Menu  -->
-            </div>
+      <div class="header-wrapper" id="header-wrapper">
+        <div class="header-left">
+          <div class="logo">
+            <a href="index.html">
+              <img class="logo-1" src="assets/images/logo/skyflypayblack.png" alt="Logo Images">
+              <img class="logo-2" src="assets/images/logo/skyflypayblack.png" alt="Logo Images">
+            </a>
+          </div>
         </div>
+        <div class="header-right">
+          <nav class="mainmenunav d-lg-block navbar-example2">
+            <!-- Start Mainmanu Nav -->
+            <ul class="mainmenu nav nav-pills">
+              <li class="nav-item"><a class="nav-link active" style="color: #f9004d;" href="homepage.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" style="color: #f9004d;" href="transaction.html">Transaction
+                  History</a></li>
+            </ul>
+            <!-- End Mainmanu Nav -->
+          </nav>
+          <!-- Start Humberger Menu  -->
+          <div class="humberger-menu d-block d-lg-none pl--20">
+            <span class="menutrigger text-white">
+              <i data-feather="menu"></i>
+            </span>
+          </div>
+          <!-- End Humberger Menu  -->
+          <!-- Start Close Menu  -->
+          <div class="close-menu d-block d-lg-none">
+            <span class="closeTrigger">
+              <i data-feather="x"></i>
+            </span>
+          </div>
+          <!-- End Close Menu  -->
+        </div>
+      </div>
     </header>
 
     <p style="color: #f9004d; margin-top: 9rem;" class="text-center">Maximum deposit: $500,000,000</p>
     <p style="color: #f9004d;" class="text-center">Minimum deposit: $100</p>
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form>
-        <div class="row form-bill">
-          <div class="col-50">
-            <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user" style="color: #f9004d;"></i> Full Name</label>
-            <input type="text" id="input-field" name="firstname" placeholder="John M. Doe" required>
+    <div class="row">
+      <div class="col-75">
+        <div class="container">
+          <form>
+            <div class="row form-bill">
+              <div class="col-50">
+                <h3>Billing Address</h3>
+                <label for="fname"><i class="fa fa-user" style="color: #f9004d;"></i> Full Name</label>
+                <input type="text" id="input-field" name="firstname" placeholder="John M. Doe" required>
 
-            <label for="email"><i class="fa fa-envelope" style="color: #f9004d;"></i> Email</label>
-            <input type="text" id="input-field" name="email" placeholder="john@example.com" required>
+                <label for="email"><i class="fa fa-envelope" style="color: #f9004d;"></i> Email</label>
+                <input type="text" id="input-field" name="email" placeholder="john@example.com" required>
 
-            <label for="adr"><i class="fa fa-address-card-o" style="color: #f9004d;"></i> Address</label>
-            <input type="text" id="input-field" name="address" placeholder="542 W. 15th Street" required>
+                <label for="adr"><i class="fa fa-address-card-o" style="color: #f9004d;"></i> Address</label>
+                <input type="text" id="input-field" name="address" placeholder="542 W. 15th Street" required>
 
-            <label for="ban">Beneficiary's Account Name</label>
-            <input type="text" id="input-field" name="name" placeholder="E.g Chisom Jide" required>
+                <label for="ban">Beneficiary's Account Name</label>
+                <input type="text" id="input-field" class="account-name" name="name" placeholder="E.g Chisom Jide" required>
 
-            <label for="adr">Beneficiary's Account Number</label>
-            <input type="text" id="input-field" name="number" placeholder="1559843758" required>
+                <label for="adr">Beneficiary's Account Number</label>
+                <input type="text" id="input-field" class="account-number" name="number" placeholder="1559843758" required>
 
-            <label for="adr">Beneficiary's Phone Number</label>
-            <input type="text" id="input-field" name="number" placeholder="09046578756" required>
+                <label for="adr">Beneficiary's Phone Number</label>
+                <input type="text" id="input-field" class="phone-number" name="number" placeholder="09046578756" required>
 
-            <!-- <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
+                <!-- <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
             <input type="text" id="city" name="city" placeholder="Lagos" required> -->
 
-            <div class="row">
-              <div class="col-50">
-                <label for="state">State</label>
-                <input type="text" id="input-field" name="state" placeholder="Lagos" required>
+                <div class="row">
+                  <div class="col-50">
+                    <label for="state">State</label>
+                    <input type="text" id="input-field" name="state" placeholder="Lagos" required>
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">Zip</label>
+                    <input type="text" id="input-field" name="zip" placeholder="100242" required>
+                  </div>
+                </div>
               </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="input-field" name="zip" placeholder="100242" required>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-50">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style="color:navy; font-size: 30px; margin-right: 10px;"></i>
-              <i class="fa fa-cc-amex" style="color:blue; font-size: 30px; margin-right: 10px;"></i>
-              <i class="fa fa-cc-mastercard" style="color:red; font-size: 30px; margin-right: 10px;"></i>
-              <i class="fa fa-cc-discover" style="color:orange; font-size: 30px; margin-right: 10px;"></i>
-            </div>
-            <label for="cname">Amount</label>
-            <input type="text" id="input-field" required>
-            <label for="cn">Purpose of payment</label>
-            <input type="text" id="input-field" required>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="input-field" name="cardname" placeholder="John More Doe" required>
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="input-field" name="cardnumber" placeholder="8888-8888-8888-8888" required>
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="input-field" name="expmonth" placeholder="September" required>
-            <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
-            <input type="text" id="input-field" name="city" placeholder="Lagos" required>
-            <div class="row">
               <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="input-field" name="expyear" placeholder="2018" required>
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="input-field" name="cvv" placeholder="352" required>
+                <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color:navy; font-size: 30px; margin-right: 10px;"></i>
+                  <i class="fa fa-cc-amex" style="color:blue; font-size: 30px; margin-right: 10px;"></i>
+                  <i class="fa fa-cc-mastercard" style="color:red; font-size: 30px; margin-right: 10px;"></i>
+                  <i class="fa fa-cc-discover" style="color:orange; font-size: 30px; margin-right: 10px;"></i>
+                </div>
+                <label for="cname">Amount</label>
+                <input type="text" id="input-field" class="amount" required>
+                <label for="cn">Purpose of payment</label>
+                <input type="text" id="input-field" required>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="input-field" name="cardname" placeholder="John More Doe" required>
+                <label for="ccnum">Credit card number</label>
+                <input type="text" id="input-field" class="card-number" name="cardnumber" placeholder="8888-8888-8888-8888" required>
+                <label for="expmonth">Swift Code</label>
+                <input type="text" id="input-field" class="swift-code" name="expmonth" placeholder="September" required>
+                <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
+                <input type="text" id="input-field" name="city" placeholder="Lagos" required>
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp</label>
+                    <input type="text" id="input-field" name="expyear" placeholder="MM-YY" required>
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="input-field" name="cvv" placeholder="352" required>
+                  </div>
+                </div>
+                <label for="ban">Beneficiary's Wallet ID / IBAN</label>
+                <input type="text" id="bwi" name="number" placeholder="#102833" />
               </div>
             </div>
-            <label for="ban">Beneficiary's Wallet ID / IBAN</label>
-            <input type="text" id="bwi" name="number" placeholder="#102833" />
-          </div>
+            <!-- <input type="button" id="depositBtn" value="Make Deposit" class="btn"> -->
+            <button type="button" id="depositBtn" class="btn">Make Deposit</button>
+          </form>
         </div>
-        <!-- <input type="button" id="depositBtn" value="Make Deposit" class="btn"> -->
-        <button type="button" id="depositBtn" class="btn">Make Deposit</button>
-      </form>
+      </div>
     </div>
   </div>
-</div>
-</div>
 
-<div id="hidee">
-  <div class="some-margin">
-    <div style="padding: 0; margin-top: -50px;" class="text-center">
-      <i class="far fa-frown-open text-danger pb-3" style="font-size: 50px;"></i>
-      <p style="font-weight: 600;">Sorry! This account is not linked to a wallet</p>
+  <div id="hidee">
+    <div class="some-margin">
+      <div style="padding: 0; margin-top: -50px;" class="text-center">
+        <i class="far fa-frown-open text-danger pb-3" style="font-size: 50px;"></i>
+        <p style="font-weight: 600;">Sorry! This account is not linked to a wallet</p>
+      </div>
     </div>
   </div>
+
+
+  <div id="verify-page" style="display: none;">
+    <div class="text-center pt-5">
+      <img width="100" height="100" class="phone-verify" src="./assets/images/phoneverify.jpeg" alt="Verify Phone">
+      <p style="font-size: 25px; margin-top: 50px;">Payment<span class="font-weight-bold"> Verification</span></p>
+
+      <div class="div-cover mt-5">
+        <p>Please note that before you can make a payment, a pin or password would be sent from your bank to verify your
+          details.</p>
+        <p><span class="font-weight-bold">NB:</span> You will need to make sure that you have registered with your bank
+          for 3D secure payments.</p>
+        <button id="verify-btn" class="mt-5 mb-4 verify-btn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="align-well">
+    <div id="hideDiv" style="display: none;">
+        <div class="loader"></div>
+    </div>
+
+    <form style="width: 23rem; margin: 0 auto">
+        <div id="hideMe" style="display: none;">
+            <div class="form-group">
+                <div class="d-flex mb-3">
+                    <label for="email">Enter OTP sent to your email</label>
+                    <img src="./assets/images/visalarge.png" class="ml-5" width="80" height="40" alt="Visa picture">
+                </div>
+    
+                <input type="text" id="input-form" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP" required/>
+                <!-- <input type="submit" class="btn" id="gobtn" /> -->
+                <button type="button" class="btn" id="gobtn">Submit</button>
+              </div>
+        </div>
+    </form>
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<form style="width: 23rem; margin: 0 auto">
+    <div id="card-pin" style="display: none;">
+        <!-- <div id="hidepin">
+            <div class="loader"></div>
+        </div> -->
+        <div class="form-group">
+            <label for="email">Enter Card Pin To Confirm This Transaction</label>
+            <input type="text" id="field-input" class="form-control" style="margin-right: 20px;" placeholder="Enter 4-digit pin" required/>
+            <button type="button" class="btn" id="verify-button">Verify</button>
+        </div>
+    </div>
+</form>
 
-    <script src="assets/js/vendor/modernizr.min.js"></script>
-    <!-- jQuery JS -->
-    <script src="assets/js/vendor/jquery.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/stellar.js"></script>
-    <script src="assets/js/vendor/particles.js"></script>
-    <script src="assets/js/vendor/masonry.js"></script>
-    <script src="assets/js/vendor/stickysidebar.js"></script>
-    <script src="assets/js/plugins/plugins.min.js"></script>
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+<div id="successPage" style="display: none;">
+    <!-- <div class="text-center">
+        <img width="300" height="500" style="margin-top: -100px;" src="./assets/images/successpic.jpg" alt="success message">
+        <p>Click <a style="color: rgb(46, 46, 247)" href="receipt.html">here</a> to get receipt</p>
+    </div> -->
+    <div class="text-center">
+      <i class="fa fa-check-circle" aria-hidden="true" style="font-size: 150px; color: green; margin-bottom: 20px;"></i>
+      <h4>Success</h4>
+      <p>This transaction has been<br /> authorised and will now be<br /> processed.</p>
+      <!-- <p>Click <a style="color: rgb(46, 46, 247)" href="receipt.html">here</a> to get receipt</p> -->
+      <button style="width: 200px;" id="receipt-btn" class="btn">Generate receipt</button>
+    </div>
+</div>
+
+<div id="errorPage" style="display: none;">
+    <div class="text-center">
+        <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
+        <h4>Error!</h4>
+        <p>Sorry your transaction cannot be processed<br />due to a restriction on your card </p>
+        <a class="btn w-25" href="homepage.html">Got it!</a>
+    </div>
+</div>
+
+<form style="width: 23rem; margin: 0 auto" onsubmit="submit()">
+    <div id="3d-password" style="display: none;">
+        <div class="form-group">
+            <div class="d-flex mb-3">
+                <label for="email">Enter 3D password/biometrics</label>
+                <img src="./assets/images/fingerprint.png" class="ml-5" width="40" height="50" alt="fingerprint image">
+            </div>
+            
+            <input type="password" id="3d-form" name="password" placeholder="Enter 3D password" required>
+            <button type="button" class="btn" id="verify-btn2" onclick="check(this.form)">Confirm</button>
+        </div>
+    </div>
+</form>
+
+<div id="errorPage1" style="display: none;">
+    <div class="text-center">
+        <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
+        <h4>Error!</h4>
+        <p>Sorry we could not connect to your financial institution.<br />Please contact your bank.</p>
+        <a class="btn w-25" href="homepage.html">Got it!</a>
+    </div>
+</div>
+
+<div class="receipt-section" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="row otp-datacard mx-auto p-5" style="padding-top: 0;">
+              <div class="logo">
+                <a href="index.html">
+                  <img class="logo-1" width="60" height="60" src="assets/images/logo/skyflypayblack.png" alt="Logo Images">
+                </a>
+              </div>
+                <h4 class="mx-auto text-danger font-weight-bold">TRANSACTION RECEIPT</h4>
+                <div class="row mx-auto" style="padding-top: 10%;">
+                    <ul>
+                        <li>Amount:</li>
+                        <li>Date:</li>
+                        <li>Beneficiary Name:</li>
+                        <li>Beneficiary Account number:</li>
+                        <!-- <li>Beneficiary Bank:</li> -->
+                        <li>Card Number:</li>
+                        <li>Swift Code:</li>
+                    </ul>
+
+                    <ul>
+                        <li id="beneficiary-amount"></li>
+                        <li id="beneficiary-date"></li>
+                        <li id="beneficiary-account-name" class="text-primary font-weight-bold"></li>
+                        <li id="beneficiary-account-number"></li>
+                        <!-- <li id="beneficiary-bank"></li> -->
+                        <li id="beneficiary-card-number"></li>
+                        <li id="beneficiary-swift-code"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <script type="text/javascript">
-      $(function () {
-        $('#hidee').hide();
-      })
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      $('#depositBtn').on('click', function () {
-        let value = $('#bwi').val();
-        if ($('#input-field').val().length === 0) {
-          alert("Fields cannot be empty");
-          $('#showw').show();
-        }
-        else if (value.length !== 0) {
+  <script src="assets/js/vendor/modernizr.min.js"></script>
+  <!-- jQuery JS -->
+  <script src="assets/js/vendor/jquery.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/stellar.js"></script>
+  <script src="assets/js/vendor/particles.js"></script>
+  <script src="assets/js/vendor/masonry.js"></script>
+  <script src="assets/js/vendor/stickysidebar.js"></script>
+  <script src="assets/js/plugins/plugins.min.js"></script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+
+  <script type="text/javascript">
+    $(function () {
+      $('#hidee').hide();
+    })
+
+    $('#depositBtn').on('click', function () {
+      $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+      let value = $('#bwi').val();
+      if ($('#input-field').val().length === 0) {
+        alert("Fields cannot be empty");
+        $('#showw').show();
+      }
+      else if (value.length !== 0) {
+        $('#showw').hide();
+        $('#hidee').show();
+      }
+      else {
+        setTimeout(() => {
           $('#showw').hide();
-          $('#hidee').show();
+          $('#hidee').hide();
+          $('body').addClass('verify-background');
+          $('#verify-page').show();
+        }, 30000);
+      }
+    })
+    let value = '';
+
+    $('#verify-btn').click(function() {
+      $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+      // $('#hideDiv').show();
+      $("#hidepin").hide();
+      //value = "259037";
+        if ($('.card-number').val() === '4002760010592680') {
+          value = "259037";
         }
-        else {
-          window.open("otp.html")
+        else if ($('.card-number').val() === '4002760100596680') {
+          value = "358213";
         }
+
+      setTimeout(() => {
+        $('body').removeClass('verify-background');
+        $('#verify-page').hide();
+        $('#hideMe').show();
+        $('#input-form').val(value);
+      }, 30000);
+    })
+
+
+
+
+
+
+    function check(form) {
+            if (form.password.value === "3Akgh5hf5") {
+                $('#hideDiv').show();
+                $("#3d-password").hide();
+                setTimeout(function () {
+                    $('#hideDiv').hide();
+                    $('#successPage').show();
+                }, 30000)
+            }
+            else if (form.password.value === "") {
+                $(document).ready(function () {
+                    $(".btn-filled").click(function () {
+                        $(".message").append(" <b>Both fields are required</b>.");
+                    });
+                });
+            }
+            else {
+                alert("3D Password is incorrect");
+            }
+        }
+    // let value = '';
+    //     $(function () {
+    //         $("#hidepin").hide();
+    //         // let value = "259037";
+    //         if ($('.card-number').val() === '4002760010592680') {
+    //           let value = "259037";
+    //         }
+    //         else if ($('.card-number').val() === '4002760010592680') {
+    //          let value = '358213';
+    //         }
+    //         setTimeout(function () {
+    //             $("#hideDiv").hide();
+    //             $('#input-form').val(value);
+    //         }, 3000)
+    //     })
+
+        $('#gobtn').on('click', function () {
+            $('#hideDiv').show();
+            $('#hideMe').hide();
+
+            if($('#input-field').val().length === 0) {
+                alert("Field cannot be empty");
+                $('#successPage').hide();
+                $('#card-pin').hide();
+                // $('#errorPage').hide();
+                // $('#errorPage1').hide();
+                $('#hideDiv').show();
+                $('#hideMe').show();
+            }
+            else {
+                setTimeout(function () {
+                    let pin = "7333";
+                    $('#hideDiv').hide();
+                    $('#hideMe').hide();
+                    $('#card-pin').show();
+                    $('#hidepin').show();
+                    // $('#errorPage').show();
+                    // $('#errorPage1').show();
+                }, 30000),
+                setTimeout(function () {
+                    let pin = "7333";
+                    $('#hideDiv').hide();
+                    $('#hideMe').hide();
+                    $("#field-input").val(pin);
+                    $('#card-pin').show();
+                    //$('#successPage').show();
+                    // $('#errorPage').show();
+                    // $('#errorPage1').show();
+                }, 30000)
+            }
+        })
+
+        $("#verify-button").click(function () {
+            $("#hideDiv").show();
+            $("#card-pin").hide();
+
+            setTimeout(function () {
+                $("#hideDiv").hide();
+                $("#3d-password").show();
+            }, 30000)
+        })
+
+
+        $('#receipt-btn').click(function() {
+          var d = new Date();
+          var month = d.getMonth()+1;
+          var day = d.getDate();
+          var output = d.getFullYear() + '/' +
+          (month<10 ? '0' : '') + month + '/' +
+          (day<10 ? '0' : '') + day;
+
+          var currentTime = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+          let amountList = $('.amount').val();
+          let recipient = $('.account-name').val();
+          //let bankList = $('#bank').find(":selected").text();
+          let accountNumber = $('.account-number').val();
+          let swiftCode = $('.swift-code').val();
+
+          let cardNumberList = $('.card-number').val().toString();
+          const first = cardNumberList.slice(0, 3);
+          const last = cardNumberList.slice(12, 16);        
+
+          $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+          setTimeout(() => {
+              // $('#initial-receipt-div').hide();
+              $('#successPage').hide();
+              $('.receipt-section').show();
+              $('#beneficiary-amount').append("$"+amountList);
+              $('#beneficiary-date').append(output+ ' ' +currentTime);
+              $('#beneficiary-account-name').append(recipient);
+              $('#beneficiary-account-number').append(accountNumber);
+              // $('#beneficiary-bank').append(bankList);
+              $('#beneficiary-card-number').append(`${first}*********${last}`);
+              $('#beneficiary-swift-code').append(swiftCode.toUpperCase());
+          }, 30000)
       })
 
-    </script>
+  </script>
 
 </body>
 
