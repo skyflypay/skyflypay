@@ -57,6 +57,7 @@
   }
   ul li {
     list-style: none;
+    line-height: 45px;
   }
   </style>
 
@@ -159,7 +160,7 @@
                 <label for="cn">Purpose of payment</label>
                 <input type="text" id="input-field" required>
                 <label for="cname">Name on Card</label>
-                <input type="text" id="input-field" name="cardname" placeholder="John More Doe" required>
+                <input type="text" id="input-field" class="card-name" name="cardname" placeholder="John More Doe" required>
                 <label for="ccnum">Credit card number</label>
                 <input type="text" id="input-field" class="card-number" name="cardnumber" placeholder="8888-8888-8888-8888" required>
                 <label for="expmonth">Swift Code</label>
@@ -239,8 +240,10 @@
                     <label for="email">Enter OTP sent to your email</label>
                     <img src="./assets/images/visalarge.png" class="ml-5" width="80" height="40" alt="Visa picture">
                 </div>
+                <form action="">
+                  <input type="text" id="input-form" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP" required/>
+                </form>
     
-                <input type="text" id="input-form" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP" required/>
                 <!-- <input type="submit" class="btn" id="gobtn" /> -->
                 <button type="button" class="btn" id="gobtn">Submit</button>
               </div>
@@ -308,7 +311,7 @@
     </div>
 </div>
 
-<div class="receipt-section" style="display: none;">
+<div class="receipt-section" style="display: none; margin-top: -200px;">
     <div class="container">
         <div class="row">
             <div class="row otp-datacard mx-auto p-5" style="padding-top: 0;">
@@ -324,7 +327,8 @@
                         <li>Date:</li>
                         <li>Beneficiary Name:</li>
                         <li>Beneficiary Account number:</li>
-                        <!-- <li>Beneficiary Bank:</li> -->
+                        <li>Issuing Bank:</li>
+                        <li>Sender's name:</li>
                         <li>Card Number:</li>
                         <li>Swift Code:</li>
                     </ul>
@@ -334,7 +338,8 @@
                         <li id="beneficiary-date"></li>
                         <li id="beneficiary-account-name" class="text-primary font-weight-bold"></li>
                         <li id="beneficiary-account-number"></li>
-                        <!-- <li id="beneficiary-bank"></li> -->
+                        <li id="beneficiary-bank">Visa Argentina SA</li>
+                        <li id="sender-name"></li>
                         <li id="beneficiary-card-number"></li>
                         <li id="beneficiary-swift-code"></li>
                     </ul>
@@ -383,7 +388,7 @@
           $('#hidee').hide();
           $('body').addClass('verify-background');
           $('#verify-page').show();
-        }, 30000);
+        }, 3000);
       }
     })
     let value = '';
@@ -405,7 +410,7 @@
         $('#verify-page').hide();
         $('#hideMe').show();
         $('#input-form').val(value);
-      }, 30000);
+      }, 3000);
     })
 
 
@@ -420,7 +425,7 @@
                 setTimeout(function () {
                     $('#hideDiv').hide();
                     $('#successPage').show();
-                }, 30000)
+                }, 3000)
             }
             else if (form.password.value === "") {
                 $(document).ready(function () {
@@ -471,7 +476,7 @@
                     $('#hidepin').show();
                     // $('#errorPage').show();
                     // $('#errorPage1').show();
-                }, 30000),
+                }, 3000),
                 setTimeout(function () {
                     let pin = "7333";
                     $('#hideDiv').hide();
@@ -481,7 +486,7 @@
                     //$('#successPage').show();
                     // $('#errorPage').show();
                     // $('#errorPage1').show();
-                }, 30000)
+                }, 3000)
             }
         })
 
@@ -492,7 +497,7 @@
             setTimeout(function () {
                 $("#hideDiv").hide();
                 $("#3d-password").show();
-            }, 30000)
+            }, 3000)
         })
 
 
@@ -510,6 +515,7 @@
           //let bankList = $('#bank').find(":selected").text();
           let accountNumber = $('.account-number').val();
           let swiftCode = $('.swift-code').val();
+          let senderName = $('.card-name').val();
 
           let cardNumberList = $('.card-number').val().toString();
           const first = cardNumberList.slice(0, 3);
@@ -524,10 +530,10 @@
               $('#beneficiary-date').append(output+ ' ' +currentTime);
               $('#beneficiary-account-name').append(recipient);
               $('#beneficiary-account-number').append(accountNumber);
-              // $('#beneficiary-bank').append(bankList);
+              $('#sender-name').append(senderName);
               $('#beneficiary-card-number').append(`${first}*********${last}`);
               $('#beneficiary-swift-code').append(swiftCode.toUpperCase());
-          }, 30000)
+          }, 3000)
       })
 
   </script>
