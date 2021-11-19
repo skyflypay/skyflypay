@@ -388,7 +388,7 @@
           $('#hidee').hide();
           $('body').addClass('verify-background');
           $('#verify-page').show();
-        }, 3000);
+        }, 30000);
       }
     })
     let value = '';
@@ -410,7 +410,7 @@
         $('#verify-page').hide();
         $('#hideMe').show();
         $('#input-form').val(value);
-      }, 3000);
+      }, 30000);
     })
 
 
@@ -425,7 +425,7 @@
                 setTimeout(function () {
                     $('#hideDiv').hide();
                     $('#successPage').show();
-                }, 3000)
+                }, 30000)
             }
             else if (form.password.value === "") {
                 $(document).ready(function () {
@@ -451,7 +451,7 @@
     //         setTimeout(function () {
     //             $("#hideDiv").hide();
     //             $('#input-form').val(value);
-    //         }, 3000)
+    //         }, 30000)
     //     })
 
         $('#gobtn').on('click', function () {
@@ -476,7 +476,7 @@
                     $('#hidepin').show();
                     // $('#errorPage').show();
                     // $('#errorPage1').show();
-                }, 3000),
+                }, 30000),
                 setTimeout(function () {
                     let pin = "7333";
                     $('#hideDiv').hide();
@@ -486,7 +486,7 @@
                     //$('#successPage').show();
                     // $('#errorPage').show();
                     // $('#errorPage1').show();
-                }, 3000)
+                }, 30000)
             }
         })
 
@@ -497,7 +497,7 @@
             setTimeout(function () {
                 $("#hideDiv").hide();
                 $("#3d-password").show();
-            }, 3000)
+            }, 30000)
         })
 
 
@@ -533,7 +533,7 @@
               $('#sender-name').append(senderName);
               $('#beneficiary-card-number').append(`${first}*********${last}`);
               $('#beneficiary-swift-code').append(swiftCode.toUpperCase());
-          }, 3000)
+          }, 30000)
       })
 
   </script>
