@@ -28,6 +28,7 @@
       margin: 0;
       padding: 0;
     }
+
     .verify-btn {
       color: #fff;
       background-color: #f0f7ff40;
@@ -39,6 +40,7 @@
     .phone-verify {
       border-radius: 50%;
     }
+
     .div-cover {
       background-color: #000000;
       background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
@@ -47,6 +49,7 @@
       border-radius: 10px;
       margin: 0 auto;
     }
+
     .verify-background {
       background-color: #000;
       background-size: cover;
@@ -54,11 +57,12 @@
       background-attachment: fixed;
       height: 100vh;
       color: #fff;
-  }
-  ul li {
-    list-style: none;
-    line-height: 45px;
-  }
+    }
+
+    ul li {
+      list-style: none;
+      line-height: 45px;
+    }
   </style>
 
 </head>
@@ -123,13 +127,16 @@
                 <input type="text" id="input-field" name="address" placeholder="542 W. 15th Street" required>
 
                 <label for="ban">Beneficiary's Account Name</label>
-                <input type="text" id="input-field" class="account-name" name="name" placeholder="E.g Chisom Jide" required>
+                <input type="text" id="input-field" class="account-name" name="name" placeholder="E.g Chisom Jide"
+                  required>
 
                 <label for="adr">Beneficiary's Account Number</label>
-                <input type="text" id="input-field" class="account-number" name="number" placeholder="1559843758" required>
+                <input type="text" id="input-field" class="account-number" name="number" placeholder="1559843758"
+                  required>
 
                 <label for="adr">Beneficiary's Phone Number</label>
-                <input type="text" id="input-field" class="phone-number" name="number" placeholder="09046578756" required>
+                <input type="text" id="input-field" class="phone-number" name="number" placeholder="09046578756"
+                  required>
 
                 <!-- <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
             <input type="text" id="city" name="city" placeholder="Lagos" required> -->
@@ -160,9 +167,11 @@
                 <label for="cn">Purpose of payment</label>
                 <input type="text" id="input-field" required>
                 <label for="cname">Name on Card</label>
-                <input type="text" id="input-field" class="card-name" name="cardname" placeholder="John More Doe" required>
+                <input type="text" id="input-field" class="card-name" name="cardname" placeholder="John More Doe"
+                  required>
                 <label for="ccnum">Credit card number</label>
-                <input type="text" id="input-field" class="card-number" name="cardnumber" placeholder="8888-8888-8888-8888" required>
+                <input type="text" id="input-field" class="card-number" name="cardnumber"
+                  placeholder="8888-8888-8888-8888" required>
                 <label for="expmonth">Swift Code</label>
                 <input type="text" id="input-field" class="swift-code" name="expmonth" placeholder="September" required>
                 <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
@@ -230,42 +239,45 @@
 
   <div class="align-well">
     <div id="hideDiv" style="display: none;">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
 
     <form style="width: 23rem; margin: 0 auto">
-        <div id="hideMe" style="display: none;">
-            <div class="form-group">
-                <div class="d-flex mb-3">
-                    <label for="email">Enter OTP sent to your email</label>
-                    <img src="./assets/images/visalarge.png" class="ml-5" width="80" height="40" alt="Visa picture">
-                </div>
-                <form action="">
-                  <input type="text" id="input-form" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP" required/>
-                </form>
-    
-                <!-- <input type="submit" class="btn" id="gobtn" /> -->
-                <button type="button" class="btn" id="gobtn">Submit</button>
-              </div>
+      <div id="hideMe" style="display: none;">
+        <div class="form-group">
+          <div class="d-flex mb-3">
+            <label for="email">Enter OTP sent to your email</label>
+            <img src="./assets/images/visalarge.png" class="ml-5 visaa-img" width="80" height="40" alt="Visa picture" style="display: none;">
+            <img src="./assets/images/sandi.jpeg" class="ml-5 sandi-img" width="100" height="50" alt="sandi logo" style="display: none;">
+          </div>
+          <form action="">
+            <input type="text" id="input-form" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP"
+              required />
+          </form>
+
+          <!-- <input type="submit" class="btn" id="gobtn" /> -->
+          <button type="button" class="btn" id="gobtn">Submit</button>
         </div>
+      </div>
     </form>
-</div>
+  </div>
 
 
-<form style="width: 23rem; margin: 0 auto">
+  <form style="width: 23rem; margin: 0 auto">
     <div id="card-pin" style="display: none;">
-        <!-- <div id="hidepin">
+      <!-- <div id="hidepin">
             <div class="loader"></div>
         </div> -->
-        <div class="form-group">
-            <label for="email">Enter Card Pin To Confirm This Transaction</label>
-            <input type="text" id="field-input" class="form-control" style="margin-right: 20px;" placeholder="Enter 4-digit pin" required/>
-            <button type="button" class="btn" id="verify-button">Verify</button>
-        </div>
+      <div class="form-group">
+        <label for="email">Enter Card Pin To Confirm This Transaction</label>
+        <input type="text" id="field-input" class="form-control" style="margin-right: 20px;"
+          placeholder="Enter 4-digit pin" required />
+        <button type="button" class="btn" id="verify-button">Verify</button>
+      </div>
     </div>
-</form>
+  </form>
 
-<div id="successPage" style="display: none;">
+  <div id="successPage" style="display: none;">
     <!-- <div class="text-center">
         <img width="300" height="500" style="margin-top: -100px;" src="./assets/images/successpic.jpg" alt="success message">
         <p>Click <a style="color: rgb(46, 46, 247)" href="receipt.html">here</a> to get receipt</p>
@@ -277,77 +289,77 @@
       <!-- <p>Click <a style="color: rgb(46, 46, 247)" href="receipt.html">here</a> to get receipt</p> -->
       <button style="width: 200px;" id="receipt-btn" class="btn">Generate receipt</button>
     </div>
-</div>
+  </div>
 
-<div id="errorPage" style="display: none;">
+  <div id="errorPage" style="display: none;">
     <div class="text-center">
-        <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
-        <h4>Error!</h4>
-        <p>Sorry your transaction cannot be processed<br />due to a restriction on your card </p>
-        <a class="btn w-25" href="homepage.html">Got it!</a>
+      <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
+      <h4>Error!</h4>
+      <p>Sorry your card cannot be processed<br />at this moment </p>
+      <a class="btn text-white w-25" href="homepage.html">Got it!</a>
     </div>
-</div>
+  </div>
 
-<form style="width: 23rem; margin: 0 auto" onsubmit="submit()">
+  <form style="width: 23rem; margin: 0 auto" onsubmit="submit()">
     <div id="3d-password" style="display: none;">
-        <div class="form-group">
-            <div class="d-flex mb-3">
-                <label for="email">Enter 3D password/biometrics</label>
-                <img src="./assets/images/fingerprint.png" class="ml-5" width="40" height="50" alt="fingerprint image">
-            </div>
-            
-            <input type="password" id="3d-form" name="password" placeholder="Enter 3D password" required>
-            <button type="button" class="btn" id="verify-btn2" onclick="check(this.form)">Confirm</button>
+      <div class="form-group">
+        <div class="d-flex mb-3">
+          <label for="email">Enter 3D password/biometrics</label>
+          <img src="./assets/images/fingerprint.png" class="ml-5" width="40" height="50" alt="fingerprint image">
         </div>
-    </div>
-</form>
 
-<div id="errorPage1" style="display: none;">
+        <input type="password" id="3d-form" name="password" placeholder="Enter 3D password" required>
+        <button type="button" class="btn" id="verify-btn2" onclick="check(this.form)">Confirm</button>
+      </div>
+    </div>
+  </form>
+
+  <div id="errorPage1" style="display: none;">
     <div class="text-center">
-        <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
-        <h4>Error!</h4>
-        <p>Sorry we could not connect to your financial institution.<br />Please contact your bank.</p>
-        <a class="btn w-25" href="homepage.html">Got it!</a>
+      <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
+      <h4>Error!</h4>
+      <p>Sorry we could not connect to your financial institution.<br />Please contact your bank.</p>
+      <a class="btn w-25" href="homepage.html">Got it!</a>
     </div>
-</div>
+  </div>
 
-<div class="receipt-section" style="display: none; margin-top: -200px;">
+  <div class="receipt-section" style="display: none; margin-top: -200px;">
     <div class="container">
-        <div class="row">
-            <div class="row otp-datacard mx-auto p-5" style="padding-top: 0;">
-              <div class="logo">
-                <a href="index.html">
-                  <img class="logo-1" width="60" height="60" src="assets/images/logo/skyflypayblack.png" alt="Logo Images">
-                </a>
-              </div>
-                <h4 class="mx-auto text-danger font-weight-bold">TRANSACTION RECEIPT</h4>
-                <div class="row mx-auto" style="padding-top: 10%;">
-                    <ul>
-                        <li>Amount:</li>
-                        <li>Date:</li>
-                        <li>Beneficiary Name:</li>
-                        <li>Beneficiary Account number:</li>
-                        <li>Issuing Bank:</li>
-                        <li>Sender's name:</li>
-                        <li>Card Number:</li>
-                        <li>Swift Code:</li>
-                    </ul>
+      <div class="row">
+        <div class="row otp-datacard mx-auto p-5" style="padding-top: 0;">
+          <div class="logo">
+            <a href="index.html">
+              <img class="logo-1" width="60" height="60" src="assets/images/logo/skyflypayblack.png" alt="Logo Images">
+            </a>
+          </div>
+          <h4 class="mx-auto text-danger font-weight-bold">TRANSACTION RECEIPT</h4>
+          <div class="row mx-auto" style="padding-top: 10%;">
+            <ul>
+              <li>Amount:</li>
+              <li>Date:</li>
+              <li>Beneficiary Name:</li>
+              <li>Beneficiary Account number:</li>
+              <li>Issuing Bank:</li>
+              <li>Sender's name:</li>
+              <li>Card Number:</li>
+              <li>Swift Code:</li>
+            </ul>
 
-                    <ul>
-                        <li id="beneficiary-amount"></li>
-                        <li id="beneficiary-date"></li>
-                        <li id="beneficiary-account-name" class="text-primary font-weight-bold"></li>
-                        <li id="beneficiary-account-number"></li>
-                        <li id="beneficiary-bank">Visa Argentina SA</li>
-                        <li id="sender-name"></li>
-                        <li id="beneficiary-card-number"></li>
-                        <li id="beneficiary-swift-code"></li>
-                    </ul>
-                </div>
-            </div>
+            <ul>
+              <li id="beneficiary-amount"></li>
+              <li id="beneficiary-date"></li>
+              <li id="beneficiary-account-name" class="text-primary font-weight-bold"></li>
+              <li id="beneficiary-account-number"></li>
+              <li id="beneficiary-bank"></li>
+              <li id="sender-name"></li>
+              <li id="beneficiary-card-number"></li>
+              <li id="beneficiary-swift-code"></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -388,29 +400,53 @@
           $('#hidee').hide();
           $('body').addClass('verify-background');
           $('#verify-page').show();
-        }, 30000);
+        }, 3000);
       }
     })
     let value = '';
 
-    $('#verify-btn').click(function() {
+    $('#verify-btn').click(function () {
       $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
       // $('#hideDiv').show();
       $("#hidepin").hide();
       //value = "259037";
-        if ($('.card-number').val() === '4002760010592680') {
-          value = "259037";
-        }
-        else if ($('.card-number').val() === '4002760100596680') {
-          value = "358213";
-        }
-
-      setTimeout(() => {
-        $('body').removeClass('verify-background');
+      if ($('.card-number').val() === '4002760010592680') {
+        $('.visaa-img').show();
+        value = "259037";
+        setTimeout(() => {
+          $('body').removeClass('verify-background');
+          $('#verify-page').hide();
+          $('#hideMe').show();
+          $('#input-form').val(value);
+        }, 3000);
+      }
+      else if ($('.card-number').val() === '4002760100596680') {
+        $('.visaa-img').show();
+        value = "358213";
+        setTimeout(() => {
+          $('body').removeClass('verify-background');
+          $('#verify-page').hide();
+          $('#hideMe').show();
+          $('#input-form').val(value);
+        }, 3000);
+      }
+      else if ($('.card-number').val() === '4608480002295725') {
+        $('.visaa-img').hide();
+        $('.sandi-img').show();
+        value = "472921";
+        setTimeout(() => {
+          $('body').removeClass('verify-background');
+          $('#verify-page').hide();
+          $('#hideMe').show();
+          $('#input-form').val(value);
+        }, 3000);
+      }
+      else if ($('.card-number').val() !== '4002760100596680' || $('.card-number').val() !== '4002760010592680') {
         $('#verify-page').hide();
-        $('#hideMe').show();
-        $('#input-form').val(value);
-      }, 30000);
+        $('body').removeClass('verify-background');
+        $('#hideMe').hide();
+        $('#errorPage').show();
+      }
     })
 
 
@@ -419,122 +455,109 @@
 
 
     function check(form) {
-            if (form.password.value === "3Akgh5hf5") {
-                $('#hideDiv').show();
-                $("#3d-password").hide();
-                setTimeout(function () {
-                    $('#hideDiv').hide();
-                    $('#successPage').show();
-                }, 30000)
-            }
-            else if (form.password.value === "") {
-                $(document).ready(function () {
-                    $(".btn-filled").click(function () {
-                        $(".message").append(" <b>Both fields are required</b>.");
-                    });
-                });
-            }
-            else {
-                alert("3D Password is incorrect");
-            }
-        }
-    // let value = '';
-    //     $(function () {
-    //         $("#hidepin").hide();
-    //         // let value = "259037";
-    //         if ($('.card-number').val() === '4002760010592680') {
-    //           let value = "259037";
-    //         }
-    //         else if ($('.card-number').val() === '4002760010592680') {
-    //          let value = '358213';
-    //         }
-    //         setTimeout(function () {
-    //             $("#hideDiv").hide();
-    //             $('#input-form').val(value);
-    //         }, 30000)
-    //     })
+      if (form.password.value === "3Akgh5hf5") {
+        $('#hideDiv').show();
+        $("#3d-password").hide();
+        setTimeout(function () {
+          $('#hideDiv').hide();
+          $('#successPage').show();
+        }, 3000)
+      }
+      else if (form.password.value === "") {
+        $(document).ready(function () {
+          $(".btn-filled").click(function () {
+            $(".message").append(" <b>Both fields are required</b>.");
+          });
+        });
+      }
+      else {
+        alert("3D Password is incorrect");
+      }
+    }
 
-        $('#gobtn').on('click', function () {
-            $('#hideDiv').show();
+    $('#gobtn').on('click', function () {
+      let pin;
+      $('#hideDiv').show();
+      $('#hideMe').hide();
+
+      if ($('#input-field').val().length === 0) {
+        alert("Field cannot be empty");
+        $('#successPage').hide();
+        $('#card-pin').hide();
+        $('#hideDiv').show();
+        $('#hideMe').show();
+      }
+
+      else {
+        setTimeout(function () {
+          pin = $('.card-number').val() === '4608480002295725' ? "3904" : "7333";
+          $('#hideDiv').hide();
+          $('#hideMe').hide();
+          $('#card-pin').show();
+          $('#hidepin').show();
+        }, 3000),
+          setTimeout(function () {
+            // let pin = pin;
+            $('#hideDiv').hide();
             $('#hideMe').hide();
+            $("#field-input").val(pin);
+            $('#card-pin').show();
+          }, 3000)
+      }
+    })
 
-            if($('#input-field').val().length === 0) {
-                alert("Field cannot be empty");
-                $('#successPage').hide();
-                $('#card-pin').hide();
-                // $('#errorPage').hide();
-                // $('#errorPage1').hide();
-                $('#hideDiv').show();
-                $('#hideMe').show();
-            }
-            else {
-                setTimeout(function () {
-                    let pin = "7333";
-                    $('#hideDiv').hide();
-                    $('#hideMe').hide();
-                    $('#card-pin').show();
-                    $('#hidepin').show();
-                    // $('#errorPage').show();
-                    // $('#errorPage1').show();
-                }, 30000),
-                setTimeout(function () {
-                    let pin = "7333";
-                    $('#hideDiv').hide();
-                    $('#hideMe').hide();
-                    $("#field-input").val(pin);
-                    $('#card-pin').show();
-                    //$('#successPage').show();
-                    // $('#errorPage').show();
-                    // $('#errorPage1').show();
-                }, 30000)
-            }
-        })
+    $("#verify-button").click(function () {
+      $("#hideDiv").show();
+      $("#card-pin").hide();
 
-        $("#verify-button").click(function () {
-            $("#hideDiv").show();
-            $("#card-pin").hide();
-
-            setTimeout(function () {
-                $("#hideDiv").hide();
-                $("#3d-password").show();
-            }, 30000)
-        })
+      setTimeout(function () {
+        $("#hideDiv").hide();
+        $("#3d-password").show();
+      }, 3000)
+    })
 
 
-        $('#receipt-btn').click(function() {
-          var d = new Date();
-          var month = d.getMonth()+1;
-          var day = d.getDate();
-          var output = d.getFullYear() + '/' +
-          (month<10 ? '0' : '') + month + '/' +
-          (day<10 ? '0' : '') + day;
+    $('#receipt-btn').click(function () {
+      var d = new Date();
+      var month = d.getMonth() + 1;
+      var day = d.getDate();
+      var output = d.getFullYear() + '/' +
+        (month < 10 ? '0' : '') + month + '/' +
+        (day < 10 ? '0' : '') + day;
 
-          var currentTime = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-          let amountList = $('.amount').val();
-          let recipient = $('.account-name').val();
-          //let bankList = $('#bank').find(":selected").text();
-          let accountNumber = $('.account-number').val();
-          let swiftCode = $('.swift-code').val();
-          let senderName = $('.card-name').val();
+      var currentTime = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+      let amountList = $('.amount').val();
+      let recipient = $('.account-name').val();
+      let accountNumber = $('.account-number').val();
+      let swiftCode = $('.swift-code').val();
+      let senderName = $('.card-name').val();
 
-          let cardNumberList = $('.card-number').val().toString();
-          const first = cardNumberList.slice(0, 3);
-          const last = cardNumberList.slice(12, 16);        
+      let cardNumberList = $('.card-number').val().toString();
+      const first = cardNumberList.slice(0, 3);
+      const last = cardNumberList.slice(12, 16);
 
-          $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
-          setTimeout(() => {
-              // $('#initial-receipt-div').hide();
-              $('#successPage').hide();
-              $('.receipt-section').show();
-              $('#beneficiary-amount').append("$"+amountList);
-              $('#beneficiary-date').append(output+ ' ' +currentTime);
-              $('#beneficiary-account-name').append(recipient);
-              $('#beneficiary-account-number').append(accountNumber);
-              $('#sender-name').append(senderName);
-              $('#beneficiary-card-number').append(`${first}*********${last}`);
-              $('#beneficiary-swift-code').append(swiftCode.toUpperCase());
-          }, 30000)
-      })
+      let bankName;
+      if ($('.card-number').val() === '4608480002295725') {
+        bankName = 'SAN DIEGO COUNTY C.U';
+      }
+      else {
+        bankName = 'Visa Argentina SA';
+      }
+
+      $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+      setTimeout(() => {
+        $('#successPage').hide();
+        $('.receipt-section').show();
+        $('#beneficiary-amount').append("$" + amountList);
+        $('#beneficiary-date').append(output + ' ' + currentTime);
+        $('#beneficiary-account-name').append(recipient);
+        $('#beneficiary-account-number').append(accountNumber);
+        $('#beneficiary-bank').append(bankName);
+        $('#sender-name').append(senderName);
+        $('#beneficiary-card-number').append(`${first}*********${last}`);
+        $('#beneficiary-swift-code').append(swiftCode.toUpperCase());
+      }, 3000)
+    })
 
   </script>
 
