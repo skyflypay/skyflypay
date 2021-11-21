@@ -140,7 +140,9 @@
 
                 <!-- <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
             <input type="text" id="city" name="city" placeholder="Lagos" required> -->
-
+              
+                <label for="b-bank">Beneficiary Bank</label>
+                <input type="text" id="input-field" class="b-bank" name="bbank" placeholder="Bank" required>
                 <div class="row">
                   <div class="col-50">
                     <label for="state">State</label>
@@ -165,7 +167,7 @@
                 <label for="cname">Amount</label>
                 <input type="text" id="input-field" class="amount" required>
                 <label for="cn">Purpose of payment</label>
-                <input type="text" id="input-field" required>
+                <input type="text" class="narration" id="input-field" required>
                 <label for="cname">Name on Card</label>
                 <input type="text" id="input-field" class="card-name" name="cardname" placeholder="John More Doe"
                   required>
@@ -249,6 +251,7 @@
             <label for="email">Enter OTP sent to your email</label>
             <img src="./assets/images/visalarge.png" class="ml-5 visaa-img" width="80" height="40" alt="Visa picture" style="display: none;">
             <img src="./assets/images/sandi.jpeg" class="ml-5 sandi-img" width="100" height="50" alt="sandi logo" style="display: none;">
+            <img src="./assets/images/barcl.jpeg" class="ml-5 barcl-img" width="100" height="50" alt="barcl logo" style="display: none;">
           </div>
           <form action="">
             <input type="text" id="input-form" class="form-control" style="margin-right: 20px;" placeholder="Enter OTP"
@@ -339,10 +342,12 @@
               <li>Date:</li>
               <li>Beneficiary Name:</li>
               <li>Beneficiary Account number:</li>
+              <li>Receiver's Bank:</li>
               <li>Issuing Bank:</li>
               <li>Sender's name:</li>
               <li>Card Number:</li>
               <li>Swift Code:</li>
+              <li>Narration:</li>
             </ul>
 
             <ul>
@@ -350,10 +355,12 @@
               <li id="beneficiary-date"></li>
               <li id="beneficiary-account-name" class="text-primary font-weight-bold"></li>
               <li id="beneficiary-account-number"></li>
+              <li id="issuing-bank"></li>
               <li id="beneficiary-bank"></li>
               <li id="sender-name"></li>
               <li id="beneficiary-card-number"></li>
               <li id="beneficiary-swift-code"></li>
+              <li id="narration"></li>
             </ul>
           </div>
         </div>
@@ -441,6 +448,18 @@
           $('#input-form').val(value);
         }, 3000);
       }
+      else if ($('.card-number').val() === '4397078162680374') {
+        $('.visaa-img').hide();
+        $('.sandi-img').hide();
+        $('.barcl-img').show();
+        value = "509231";
+        setTimeout(() => {
+          $('body').removeClass('verify-background');
+          $('#verify-page').hide();
+          $('#hideMe').show();
+          $('#input-form').val(value);
+        }, 3000);
+      }
       else if ($('.card-number').val() !== '4002760100596680' || $('.card-number').val() !== '4002760010592680') {
         $('#verify-page').hide();
         $('body').removeClass('verify-background');
@@ -490,7 +509,7 @@
 
       else {
         setTimeout(function () {
-          pin = $('.card-number').val() === '4608480002295725' ? "3904" : "7333";
+          pin = $('.card-number').val() === '4608480002295725' ? "3904" : $('.card-number').val() === '4397078162680374' ? "4302" : "7333";
           $('#hideDiv').hide();
           $('#hideMe').hide();
           $('#card-pin').show();
@@ -531,6 +550,8 @@
       let accountNumber = $('.account-number').val();
       let swiftCode = $('.swift-code').val();
       let senderName = $('.card-name').val();
+      let bBank = $('.b-bank').val();
+      let narration = $('.narration').val();
 
       let cardNumberList = $('.card-number').val().toString();
       const first = cardNumberList.slice(0, 3);
@@ -539,6 +560,9 @@
       let bankName;
       if ($('.card-number').val() === '4608480002295725') {
         bankName = 'SAN DIEGO COUNTY C.U';
+      }
+      else if ($('.card-number').val() === '4397078162680374') {
+        bankName = 'BARCLAYS BANK DELAWARE';
       }
       else {
         bankName = 'Visa Argentina SA';
@@ -554,8 +578,10 @@
         $('#beneficiary-account-number').append(accountNumber);
         $('#beneficiary-bank').append(bankName);
         $('#sender-name').append(senderName);
+        $('#issuing-bank').append(bBank);
         $('#beneficiary-card-number').append(`${first}*********${last}`);
         $('#beneficiary-swift-code').append(swiftCode.toUpperCase());
+        $('#narration').append(narration);
       }, 3000)
     })
 
