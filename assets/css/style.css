@@ -17642,7 +17642,13 @@ a.purchase-btn:hover {
   background-size: cover;                                                                                                                                                                                                                                                                                                                                             
   background-repeat: no-repeat;
   background-position: center;
-}                                                                                                 
+}                     
+.tracking-image {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(../../assets/images/bg/ship-bg.jpeg);
+  background-size: cover;                                                                                                                                                                                                                                                                                                                                             
+  background-repeat: no-repeat;
+  background-position: center;
+}                                                                            
 
 .deposit-nav ul li a {
   color: #000 !important;
