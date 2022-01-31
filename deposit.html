@@ -163,32 +163,33 @@
                   <i class="fa fa-cc-amex" style="color:blue; font-size: 30px; margin-right: 10px;"></i>
                   <i class="fa fa-cc-mastercard" style="color:red; font-size: 30px; margin-right: 10px;"></i>
                   <i class="fa fa-cc-discover" style="color:orange; font-size: 30px; margin-right: 10px;"></i>
+                  <img src="./assets/images/bt-img.png" width="70" height="40" class="" alt="" />
                 </div>
                 <label for="cname">Amount</label>
                 <input type="text" id="input-field" class="amount" required>
                 <label for="cn">Purpose of payment</label>
                 <input type="text" class="narration" id="input-field" required>
-                <label for="cname">Name on Card</label>
+                <label for="cname">Sender's account name</label>
                 <input type="text" id="input-field" class="card-name" name="cardname" placeholder="John More Doe"
                   required>
-                <label for="ccnum">Credit card number</label>
+                <label for="ccnum">Sender's account number</label>
                 <input type="text" id="input-field" class="card-number" name="cardnumber"
-                  placeholder="8888-8888-8888-8888" required>
-                <label for="expmonth">Swift Code</label>
-                <input type="text" id="input-field" class="swift-code" name="expmonth" placeholder="September" required>
-                <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> City</label>
-                <input type="text" id="input-field" name="city" placeholder="Lagos" required>
+                  placeholder="1266367828" required>
+                <label for="expmonth">ISO Branch number</label>
+                <input type="text" id="input-field" class="swift-code" name="expmonth" placeholder="77477392" required>
+                <label for="city"><i class="fa fa-institution" style="color: #f9004d;"></i> BVN</label>
+                <input type="text" id="input-field" name="city" placeholder="22467823546" required>
                 <div class="row">
                   <div class="col-50">
-                    <label for="expyear">Exp</label>
-                    <input type="text" id="input-field" name="expyear" placeholder="MM-YY" required>
+                    <label for="expyear">WP2 Security</label>
+                    <input type="text" id="input-field" name="expyear" required>
                   </div>
-                  <div class="col-50">
+                  <!-- <div class="col-50">
                     <label for="cvv">CVV</label>
                     <input type="text" id="input-field" name="cvv" placeholder="352" required>
-                  </div>
+                  </div> -->
                 </div>
-                <label for="ban">Beneficiary's Wallet ID / IBAN</label>
+                <label for="ban">Branch Sort Code</label>
                 <input type="text" id="bwi" name="number" placeholder="#102833" />
               </div>
             </div>
@@ -200,17 +201,17 @@
     </div>
   </div>
 
-  <div id="hidee">
+  <!-- <div id="hidee">
     <div class="some-margin">
       <div style="padding: 0; margin-top: -50px;" class="text-center">
         <i class="far fa-frown-open text-danger pb-3" style="font-size: 50px;"></i>
         <p style="font-weight: 600;">Sorry! Beneficiary not available/invalid at the moment.</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
-  <div id="verify-page" style="display: none;">
+  <!-- <div id="verify-page" style="display: none;">
     <div class="text-center pt-5">
       <img width="100" height="100" class="phone-verify" src="./assets/images/phoneverify.jpeg" alt="Verify Phone">
       <p style="font-size: 25px; margin-top: 50px;">Payment<span class="font-weight-bold"> Verification</span></p>
@@ -223,14 +224,37 @@
         <button id="verify-btn" class="mt-5 mb-4 verify-btn">Continue</button>
       </div>
     </div>
+  </div> -->
+
+  <div id="verify-page" style="display: none;">
+    <div class="text-center pt-5">
+      <img src="./assets/images/access-logo.png" width="100" height="100" alt="">
+      <img width="100" height="100" class="phone-verify" src="./assets/images/finger-print.jpeg" alt="Verify Phone">
+      <p style="font-size: 25px; margin-top: 50px;">Payment<span class="font-weight-bold"> Verification</span></p>
+
+      <div class="div-cover mt-5">
+        <p style="color: #fff;">Dear ALHAJI BUKAR SHERIFF,</p>
+        <p style="color: #fff;"><span class="font-weight-bold">NB: </span>Biometric Verification is required to authorize transaction.</p>
+        <form>
+          <input id="biometrics-form" type="text" name="" placeholder="Enter biometrics" style="padding: 10px 30px; background-color: #fff;" required />
+          <!-- <input class="mt-5 mb-4 verify-btn" type="submit" /> -->
+          <button type="button" id="verify-bio" class="mt-5 mb-4 verify-btn">Continue</button>
+        </form>
+      </div>
+    </div>
   </div>
 
 
 
 
-
-
-
+  <div id="bio-error" style="display: none; margin-top: 10%;">
+    <div class="text-center">
+      <i class="far fa-times-circle" aria-hidden="true" style="font-size: 70px; color: red; margin-bottom: 20px;"></i>
+      <h4>Error!</h4>
+      <p>Account authorization declined</p>
+      <a class="btn w-25" href="homepage.html">Got it!</a>
+    </div>
+  </div>
 
 
 
@@ -406,15 +430,15 @@
         alert("Fields cannot be empty");
         $('#showw').show();
       }
-      else if (value.length !== 0) {
-        $('#showw').hide();
-        $('#hidee').show();
-      }
+      // else if (value.length !== 0) {
+      //   $('#showw').hide();
+      //   $('#hidee').show();
+      // }
       else {
         setTimeout(() => {
           $('#showw').hide();
           $('#hidee').hide();
-          $('body').addClass('verify-background');
+          // $('body').addClass('verify-background');
           $('#verify-page').show();
         }, 3000);
       }
@@ -489,6 +513,23 @@
       }
     })
 
+
+    
+    $('#verify-bio').on('click', function () {
+      let bioVal = $('#biometrics-form').val();
+
+      if (bioVal !== '19960316') {
+        alert("Incorrect biometrics");
+      }
+      else {
+        $(this).html('<img src="./assets/images/loader.gif" style="height:20px;" />');
+
+        setTimeout(() => {
+          $('#bio-error').show();
+          $('#verify-page').hide();
+        }, 3000);
+      }
+    })
 
 
 
